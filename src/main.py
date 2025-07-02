@@ -3,7 +3,8 @@ from models import (
     exemplo_mineracao_texto
 )
 from webScraping import scrape_f1_results
-
+import matplotlib
+matplotlib.use('TkAgg')
 
 dataset_path = './files/dataset.csv'
 
