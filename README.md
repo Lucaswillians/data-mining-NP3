@@ -2,6 +2,48 @@
 
 # Projeto de Mineração de Texto e Análise de Séries Temporais
 
+
+## Série Temporal Original
+
+Mostra todos os pontos da série entre 1970-1978 em escala logarítmica.
+A variação é brusca e hierárquica, revelando valores que se estendem de unidades a dezenas de milhares.
+A densidade de traços indica forte não-estacionariedade e possíveis outliers.
+
+![1](images/Figure_1.png)
+
+## Autocorrelação – ACF 
+
+Após a primeira diferença, apenas o lag 1 ultrapassa o intervalo de confiança.
+Os demais lags ficam próximos de zero, sugerindo que dependências além do primeiro atraso são fracas.
+Isso respalda a escolha de apenas um termo de média móvel (q = 1).
+A rápida queda confirma que a diferenciação tornou a série quase estacionária.
+
+![2](images/partial1.png)
+
+## Autocorrelação Parcial – PACF
+
+Semelhantemente ao ACF, somente o lag 1 é estatisticamente relevante.
+Indica que um único termo autorregressivo (p = 1) é suficiente para capturar a inércia imediata.
+A ausência de estruturas além do primeiro lag reforça um modelo ARIMA simples.
+
+![3](images/partial2.png)
+
+## Previsão ARIMA
+
+O modelo diferenciado prevê valores em torno de 3 700–4 000 para 1977.
+A faixa prevista (linha laranja) permanece relativamente estreita, evidenciando boa confiança interna.
+
+![4](images/arima.png)
+
+## Previsão SARIMA
+
+Introduz termos sazonais anuais, ajustando picos e vales recorrentes a cada 12 períodos.
+As projeções ficam mais baixas (≈ 2 500–3 000), alinhadas ao comportamento sazonal recente.
+A inclusão da sazonalidade reduz viés observado no ARIMA puro.
+
+![5](images/sarima_prev.png)
+
+
 ## Descrição
 
 Este projeto realiza duas análises distintas:

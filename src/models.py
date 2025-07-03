@@ -2,10 +2,13 @@ import re
 from collections import Counter
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib
 from statsmodels.tsa.arima.model import ARIMA
 from statsmodels.tsa.statespace.sarimax import SARIMAX
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 import warnings
+
+matplotlib.use('TkAgg')
 
 warnings.filterwarnings("ignore")
 
