@@ -1,5 +1,7 @@
 # data-mining-NP3
 
+## Marlon e Lucas serpa 
+
 # Projeto de Mineração de Texto e Análise de Séries Temporais
 
 
